@@ -24,35 +24,32 @@ public class Calculator {
 		return operandLeft/operandRight;
 	}
 
-	public static void init(Map<String, String> expMap) {
+	public void init(Map<String, String> expMap) {
 		
-		Calculator calc = new Calculator();
-		calc.operandLeft = Integer.valueOf(expMap.get("operandLeft"));
-		calc.operandRight = Integer.valueOf(expMap.get("operandRight"));
-		calc.arithmeticOperator = expMap.get("operator");
 		
-		calc.calculate();
+		operandLeft = Integer.valueOf(expMap.get("operandLeft"));
+		operandRight = Integer.valueOf(expMap.get("operandRight"));
+		arithmeticOperator = expMap.get("operator");
+		
+		//calc.calculate();
 	}
 	
-	private void calculate() {
+	public int calculate() {
 		
 		switch(arithmeticOperator) {
 		
 		case "+":
-			System.out.println("output: " + add(operandLeft, operandRight));
-			break;
+			return add(operandLeft, operandRight);
 		case "-":
-			System.out.println("output: " + substraction(operandLeft, operandRight));
-			break;
+			return substraction(operandLeft, operandRight);			
 		case "*":
-			System.out.println("output: " + multiplication(operandLeft, operandRight));
-			break;
+			return multiplication(operandLeft, operandRight);
 		case "/":
-			System.out.println("output: " + division(operandLeft, operandRight));
-			break;
-			
+			return division(operandLeft, operandRight);		
 		default:
-			break;
+			return 0;
 		}
+		
+		
 	}
 }
