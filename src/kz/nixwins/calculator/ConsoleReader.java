@@ -16,7 +16,7 @@ public class ConsoleReader {
 		
 		Scanner scanner = new Scanner(in);
 		
-		System.out.print("Введите выражения (a+b,a -b, a*b, a/b) : ");
+		System.out.print("Р’РІРµРґРёС‚Рµ (a+b,a -b, a*b, a/b) : ");
 		String raw = scanner.nextLine();
 		
 		//System.out.println(raw);

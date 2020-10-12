@@ -42,6 +42,7 @@ public class ExpressionParser {
 					
 					Decoder<String> decoderRoman = new DecoderRoman();
 					String[] arabicNums= decoderRoman.decode(arr);
+					romanNumberToUppercase(arr);
 					isRoman = true;
 					//System.out.println("HERE " + Arrays.toString(arabicNums));
 					initExpressoion(arabicNums);
@@ -57,6 +58,7 @@ public class ExpressionParser {
 
 		return expMap;		
 	}
+	
 	public void initArithmeticOperator(final String expStr) {
 		
 		try {
@@ -110,6 +112,13 @@ public class ExpressionParser {
 	
 	public boolean getIsRoman() {
 		return isRoman;
+	}
+	
+	public void romanNumberToUppercase(String[] nums) {
+		
+		for(int i=0; i < nums.length; i++) {
+			nums[i].toUpperCase();
+		}
 	}
 	
 	class Validator{
