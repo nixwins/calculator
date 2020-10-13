@@ -6,9 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import com.sun.istack.internal.FinalArrayList;
-
 import kz.nixwins.calculator.model.RomanNumber;
 import kz.nixwins.calculator.util.Decoder;
 import kz.nixwins.calculator.util.DecoderRoman;
