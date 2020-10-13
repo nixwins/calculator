@@ -121,8 +121,8 @@ public class ExpressionParser {
 	
 	class Validator{
 		
-		private final int  MAX_LEN = 7; // 10 + 10
-		private final int MIN_LEN = 3;  // 1+2
+		private final int  MAX_LEN = 9; // 10 + 10 VIII+VIII
+		private final int MIN_LEN = 3;  // 1+2 I+I
 		private final int RANGE_START = 1;
 		private final int RANGE_END =  10;
 		
